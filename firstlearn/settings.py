@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wf=eq!u1&spp6)+2g2#-7@$!&mt1s*-u+)jffwya1)mp5cx%a$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://tabletennis-i2m0.onrender.com/']
 
 
 # Application definition
