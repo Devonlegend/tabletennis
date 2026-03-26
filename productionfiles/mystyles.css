@@ -1,0 +1,116 @@
+/* ==============================
+   Red and Blue Master CSS
+   ============================== */
+
+/* 1. CSS Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. The Red and Blue Animated Background */
+body {
+    /* Uses high-saturation red and blue shades for vibrancy */
+    background: linear-gradient(135deg, #ff0055, #0011ff, #ff3300);
+    
+    /* Crucial: We make the background 4x the normal size 
+       to allow the colors to drift smoothly across the screen */
+    background-size: 400% 400%;
+    animation: blueRedGradient 15s ease infinite;
+    
+    /* Basic Typography setup */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #ffffff;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    
+    /* Centering setup */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* The animation keyframes:
+  This creates a smooth, oceanic drift between the deep blue and the crimson red.
+*/
+@keyframes blueRedGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 3. The Glassmorphism Container (The frosted look works perfectly here) */
+.glass-card {
+    /* Using slightly less transparent white (0.15) for better text contrast on blue/red */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /* For Safari */
+    
+    /* Clean white border */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 24px;
+    
+    padding: 3.5rem 2.5rem;
+    max-width: 550px;
+    width: 90%;
+    text-align: center;
+    
+    /* Deep shadow gives it depth against the vibrant background */
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+/* 4. Typography & Elements */
+h1 {
+    font-size: 2.8rem; /* Slightly larger */
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    letter-spacing: -1px;
+    
+    /* Option: Subtle text glow to pop against the blue */
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    
+    /* Using 95% opacity white makes it softer but still highly readable */
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+}
+
+/* 5. The Beautiful Button (Red/Blue Hover Action) */
+.btn {
+    /* Start with white outline */
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    
+    padding: 0.9rem 2.8rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    
+    /* Smooth transition for all properties */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Hover effect: Fills in white and casts a strong glow */
+.btn:hover {
+    background: #ffffff;
+    color: #1a1a1a; /* Dark text when button is white */
+    border: 2px solid #ffffff;
+    
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(255, 255, 255, 0.5); /* Strong Glow */
+}
