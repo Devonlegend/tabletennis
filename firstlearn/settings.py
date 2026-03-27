@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-wf=eq!u1&spp6)+2g2#-7@$!&mt1s*-u+)jffwya1)mp5cx%a$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://tabletennis-i2m0.onrender.com/']
+ALLOWED_HOSTS = ['tabletennis-i2m0.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
